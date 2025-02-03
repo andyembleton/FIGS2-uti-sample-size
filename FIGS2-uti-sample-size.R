@@ -78,7 +78,7 @@ ggplot(results, aes(x = correlation, y = power, color = as.factor(theta))) +
   labs(title = bquote("Simulated power ("*mu[0]*"="*.(mu0)*", "*mu[1]*"="*.(mu1)*")") ,
        x = "Correlation",
        y = "Power",
-       caption = paste0(n.sims, " simulations, effect size=", target.diff, ", correlation ", min(correlations), " to ", max(correlations), ", theta ", max(thetas), " to ", min(thetas), " (equivalent to variances of ", round(mu0 + ((mu0^2) / max(thetas)),1), " to ", round(mu0 + ((mu0^2) / min(thetas)),1), ")") ,
+       caption = paste0(n.sims, " simulations, effect size=", target.diff, ", random ", dropout*100, "% dropout, correlation ", min(correlations), " to ", max(correlations), ", theta ", max(thetas), " to ", min(thetas), " (equivalent to variances of ", round(mu0 + ((mu0^2) / max(thetas)),1), " to ", round(mu0 + ((mu0^2) / min(thetas)),1), ")") ,
        color = "Theta") +
   guides(color = guide_legend(reverse = TRUE)) +
   geom_vline(xintercept = 0.5, linetype = "dashed") +
