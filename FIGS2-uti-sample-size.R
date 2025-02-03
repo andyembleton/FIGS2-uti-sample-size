@@ -2,8 +2,6 @@
 # Jan-2025
 # FIGS2 trial design
 
-library(simstudy)
-library(MASS)
 library(mvtnorm)
 library(ggplot2)
 
